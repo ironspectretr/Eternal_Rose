@@ -45,6 +45,6 @@ Eğer `sevgili.exe` sizde çalışıyorsa (yani bir sevgiliniz varsa), bu linki 
 1. **İlişki Durumu:** Bu yazılımı sevgilinize "Al sana hediye" diye atıp, gerçek hediye/çiçek alma masrafından yırtmaya çalışırsanız ve sonucunda **terk edilirseniz**, geliştirici hiçbir sorumluluk kabul etmez. Risk tamamen kullanıcıya aittir (User Error).
 2. **Bug & Trip:** Kodda oluşabilecek herhangi bir hata (bug) yüzünden "Sen bana bozuk çiçek mi yolladın, bana değer vermiyorsun!" şeklinde trip yemeniz durumunda GitHub Issues kısmına ağlamayınız.
 3. **Yan Etkiler:** Kodun aşırı romantizm içermesi sebebiyle ekrana uzun süre bakmak, yalnız kullanıcılar için "Ben niye böyleyim" sorgulamalarına yol açabilir. (Geliştiricide bu soruna sebep oldu)
-4. Yazılım geliştiricisi, bu yazılımın yanlış kullanımından kaynaklanan hiçbir sorumluluğu üstlenmez.
+4. Yazılım geliştiricisi, bu yazılımın kullanımından kaynaklanan hiçbir sorumluluğu üstlenmez.
 
 **MIT Lisansı** ile sunulmuştur. Yani kodu alın, kullanın, dağıtın ama başınız yanarsa beni tanımıyorsunuz.

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana...❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #ffe6ea;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+        overflow: visible;
+        transform: translateY(-50px);
+    }
+
+    .stem { stroke-dasharray: 1000; stroke-dashoffset: 1000; opacity: 0.8; }
+    .leaf { transform: scale(0); opacity: 0; }
+    .flower-head { transform: scale(0); transform-origin: 300px 280px; opacity: 0; }
+    .surrounding-element-inner { opacity: 0; transform: translateY(20px); }
+    .orbit-wrapper { transform-origin: 300px 325px; }
+
+    .message-container {
+        position: absolute;
+        bottom: 50px;
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 20;
+    }
+
+    .message-text {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #e65a7e;
+        position: absolute;
+        width: 100%;
+        opacity: 0; 
+        line-height: 1.4;
+    }
+
+    @keyframes entryGlow {
+        0% {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            color: #ffffff;
+            text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #e65a7e;
+        }
+        20% {
+            opacity: 1;
+            transform: translateY(0) scale(1.05);
+            color: #ffffff;
+            text-shadow: 0 0 30px #fff, 0 0 60px #e65a7e;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            color: #e65a7e;
+            text-shadow: none;
+        }
+    }
+
+    @keyframes exitFadeUp {
+        0% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-30px); }
+    }
+
+    .anim-entry { animation: entryGlow 1.2s ease-out forwards; }
+    .anim-exit { animation: exitFadeUp 0.8s ease-in forwards; }
+
+
+    @keyframes growStem { to { stroke-dashoffset: 0; } }
+    @keyframes bloomOut { to { transform: scale(1); opacity: 1; } }
+    @keyframes fadeInSoft { to { opacity: 1; transform: translateY(0); } }
+    @keyframes flowerPop {
+        0% { transform: scale(0); opacity: 0; }
+        60% { transform: scale(1.15); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes orbitCW { to { transform: rotate(360deg); } }
+    @keyframes orbitCCW { to { transform: rotate(-360deg); } }
+
+    .stem-anim { animation: growStem 2s linear forwards; }
+    .leaf-left-anim { transform-origin: 298px 450px; animation: bloomOut 0.8s ease-out forwards; animation-delay: 1.0s; }
+    .leaf-right-anim { transform-origin: 302px 400px; animation: bloomOut 0.8s ease-out forwards; animation-delay: 1.2s; }
+    .head-anim { animation: flowerPop 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; animation-delay: 2.0s; }
+    
+    .surround-fade-1 { animation: fadeInSoft 3s ease forwards; animation-delay: 2.5s; }
+    .surround-fade-2 { animation: fadeInSoft 3s ease forwards; animation-delay: 2.8s; }
+    .surround-fade-3 { animation: fadeInSoft 3s ease forwards; animation-delay: 3.0s; }
+    
+    .orbit-anim-cw-slow { animation: orbitCW 45s linear infinite; }
+    .orbit-anim-ccw-slower { animation: orbitCCW 60s linear infinite; }
+    .orbit-anim-cw-medium { animation: orbitCW 30s linear infinite; }
+    
+</style>
+</head>
+<body>
+
+<div class="container">
+    <svg viewBox="0 0 600 650" xmlns="http://www.w3.org/2000/svg">
+        <g class="orbit-wrapper orbit-anim-cw-slow">
+            <g class="surrounding-element-inner surround-fade-1">
+                <circle cx="50" cy="150" r="4" fill="#ffc2d1"/> 
+                <path d="M80,300 Q90,290 85,280 Q75,290 80,300" fill="#ffb7c5"/>
+                <circle cx="550" cy="480" r="6" fill="#ff8ba7" opacity="0.6"/>
+            </g>
+        </g>
+        <g class="orbit-wrapper orbit-anim-ccw-slower">
+            <g class="surrounding-element-inner surround-fade-2">
+                <circle cx="550" cy="120" r="5" fill="#ffc2d1"/>
+                <path d="M520,350 Q530,340 525,330 Q515,340 520,350" fill="#ffb7c5"/>
+                <circle cx="60" cy="500" r="3" fill="#ff8ba7"/>
+                <circle cx="300" cy="30" r="4" fill="#ffe66d"/> 
+            </g>
+        </g>
+        <g class="orbit-wrapper orbit-anim-cw-medium">
+            <g class="surrounding-element-inner surround-fade-3">
+                 <circle cx="150" cy="580" r="5" fill="#ffc2d1"/>
+                 <circle cx="450" cy="550" r="7" fill="#ff8ba7" opacity="0.5"/>
+                 <circle cx="220" cy="220" r="2" fill="#fff"/>
+                 <circle cx="380" cy="220" r="2" fill="#fff"/>
+            </g>
+        </g>
+
+        <path class="stem stem-anim" d="M300,650 Q300,550 295,450 Q305,350 300,280" stroke="#78a886" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path class="leaf leaf-left-anim" d="M298,450 Q250,430 240,390 Q280,380 298,450 Z" fill="#8cb58f" />
+        <path class="leaf leaf-right-anim" d="M302,400 Q350,380 360,340 Q320,330 302,400 Z" fill="#8cb58f" />
+
+        <g class="flower-head head-anim">
+            <path d="M300,280 C160,180 180,20 300,40 C420,20 440,180 300,280 Z" fill="#F09FB3"/>
+            <path d="M300,260 C190,180 210,60 300,80 C390,60 410,180 300,260 Z" fill="#F58CA6"/>
+            <path d="M300,240 C220,180 230,100 300,120 C370,100 380,180 300,240 Z" fill="#FA6E8E"/>
+            <circle cx="300" cy="170" r="40" fill="#FF4D6D"/>
+            <g transform="translate(300, 170)">
+                <ellipse rx="25" ry="18" fill="#FF3355" transform="rotate(-20)"/>
+                <ellipse rx="18" ry="12" fill="#FF6688" transform="rotate(30)"/>
+                <circle r="8" fill="#FF85A1"/>
+            </g>
+        </g>
+    </svg>
+
+    <div class="message-container" id="msgContainer"></div>
+</div>
+
+<script>
+    const messages = [
+        "Sen gülünce bahar geliyor. 🌸",
+        "Sesin, ruhumun en sevdiği şarkı.",
+        "Gözlerin, gökyüzünden daha derin.",
+        "Sen benim en güzel şansımsın. 🍀",
+        "Kalbim sadece seninle atıyor. ❤️",
+        "Varlığın, ömrüme bereket.",
+        "Seni sevmek, nefes almak gibi.",
+        "Kirpiklerinin ucuna kadar şiirsin.",
+        "Ellerin, evim hissettiğim tek yer.",
+        "Gülüşün dünyamı aydınlatıyor. ☀️",
+        "Sen benim bitmeyen duamsın.",
+        "Bakışların kalbime dokunuyor.",
+        "Seninle her an, bir mucize. ✨",
+        "Dünyanın en güzel manzarası yüzün.",
+        "Seni her gün yeniden seviyorum.",
+        "İyi ki varsın, iyi ki benimsin.",
+        "Sen, hayallerimden bile güzelsin.",
+        "Kalbimin tek sahibi sensin. 🗝️",
+        "Seninle geçen her saniye kıymetli.",
+        "Ruh eşi dedikleri sensin.",
+        "Sen benim sığınağımsın.",
+        "Aşkın tarifi sensin.",
+        "Gecemi aydınlatan yıldızımsın. ⭐",
+        "Sonsuza dek sadece sen... ∞",
+        "Gülüşünle ısınan bir dünya var içimde.",
+        "Seninle her mevsim bahar bana. 🌱",
+        "Gözlerin, kaybolduğum en güzel deniz.",
+        "Kalbimin en güvenli limanı sensin.",
+        "Varlığın, hayatımın en büyük şansı. 🍀",
+        "Sen benim en güzel vazgeçilmezimsin. 💎",
+        "Sesin, günün tüm yorgunluğunu siliyor.",
+        "Bakışlarınla kalbime çiçekler ekiyorsun. 💐",
+        "Sen yanımdayken zaman dursun isterim.",
+        "Hayallerimin başrolü hep sensin.",
+        "Seni sevmek, dünyanın en güzel devrimi. ❤️",
+        "Geceme doğan en parlak aysın. 🌙",
+        "Seninle susmak bile güzel.",
+        "Ruhumun diğer yarısını sende buldum.",
+        "Her zerren, bir sanat eseri gibi.",
+        "Sen benim en tatlı telaşımsın. 🦋",
+        "Aşk, senin adınla anlam kazandı.",
+        "Gönlümün en nadide çiçeği sensin. 🌷",
+        "Nefes aldığım her an aklımdasın.",
+        "Seninle sonsuzluğa yürümek isterim.",
+        "Mutluluğun formülü: Senin gülüşün.",
+        "Sen benim sönmeyen güneşimsin. ☀️",
+        "Kalbim sadece senin için atıyor. 💓",
+        "Sen, tüm şiirlerin ilham kaynağısın.",
+        "Dünya seninle daha yaşanılır bir yer. 🌎",
+        "Gözlerinde huzuru buluyorum. 🕊️",
+        "Seni kelimelere sığdıramam."
+    ];
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    const container = document.getElementById('msgContainer');
+    let currentIndex = 0;
+
+    function showNextMessage() {
+        if (currentIndex >= messages.length) {
+            shuffleArray(messages);
+            currentIndex = 0;
+        }
+
+        const msgDiv = document.createElement('div');
+        msgDiv.classList.add('message-text');
+        msgDiv.innerText = messages[currentIndex];
+        container.appendChild(msgDiv);
+
+        msgDiv.classList.add('anim-entry');
+
+        setTimeout(() => {
+            msgDiv.classList.remove('anim-entry');
+            msgDiv.classList.add('anim-exit'); 
+
+            setTimeout(() => {
+                msgDiv.remove();
+                currentIndex++;
+                showNextMessage(); 
+            }, 800); 
+
+        }, 4000); 
+    }
+
+    shuffleArray(messages);
+    
+    setTimeout(() => {
+        showNextMessage();
+    }, 4500);
+
+</script>
+
+</body>
+</html>

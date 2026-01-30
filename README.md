@@ -37,8 +37,8 @@ Bu proje 14 Şubat'ta yalnız kalan yazılımcılar, kendine hediye almak isteye
 Bu proje aslında "Sevgililer Günü'nde yalnız giren yazılımcıların" kendi kendilerini avutması ve CSS yeteneklerini sergilemesi için (şaka amaçlı) kodlanmıştır.
 
 **Ancak:**
-Eğer `sevgili.exe` sizde çalışıyorsa (yani bir sevgiliniz varsa), bu linki ona "Bak senin için kod yazdım, bu güller asla solmaz" diyerek atabilirsiniz.
-* **Pro Tip:** "Seni marketten aldığım çiçekle değil, alın terimle yazdığım kodla seviyorum" cümlesiyle %100 çalışır. (Test edildi, onaylandı... sanırım.)
+Eğer `sevgili.exe` sizde çalışıyorsa (yani bir sevgiliniz varsa), bu linki ona "Bak senin için kod yazdım, bu güller asla solmaz" diyerek atabilirsiniz. (Kodlar yine de geliştiriciye aittir)
+* **Pro Tip:** "Seni marketten aldığım çiçekle değil, alın terimle yazdığım kodla seviyorum" cümlesiyle %100 çalışır.(!) (Test edildi, onaylandı... sanırım.)
 
 ## ⚠️ Sorumluluk Reddi (Disclaimer)
 

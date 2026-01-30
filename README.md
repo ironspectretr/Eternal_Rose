@@ -1,4 +1,4 @@
-# Eternal-Rose-
+# Eternal_Rose
 404-Love-Not-Found()
 # 🌹 Digital Romance / Sanal Çiçek Animasyonu
 
